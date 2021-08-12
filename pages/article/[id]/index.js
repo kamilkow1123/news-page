@@ -1,13 +1,15 @@
+import React from "react";
+import Meta from "../../../components/Meta";
 import { server } from "../../../config";
 import Link from "next/link";
-import { useRouter } from "next/router";
-import React from "react";
+// import { useRouter } from "next/router";
 
 const article = ({ article }) => {
     // const router = useRouter();
     // const { id } = router.query;
     return (
         <React.Fragment>
+            <Meta title={article.title} description={article.excerpt} />
             <h1>{article.title}</h1>
             <p>{article.body}</p>
             <br />
